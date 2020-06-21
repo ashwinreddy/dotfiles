@@ -6,6 +6,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mileszs/ack.vim'
+
 
 call vundle#end()
 filetype plugin indent on
