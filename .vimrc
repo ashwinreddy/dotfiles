@@ -9,6 +9,8 @@ Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'scrooloose/nerdtree'
+
 
 
 call vundle#end()
