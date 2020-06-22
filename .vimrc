@@ -5,13 +5,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'scrooloose/nerdtree'
-
-
 
 call vundle#end()
 filetype plugin indent on
@@ -22,3 +21,5 @@ set number relativenumber
 set nu rnu
 set hlsearch
 set backspace=2
+
+map <C-n> :NERDTreeToggle<CR>
