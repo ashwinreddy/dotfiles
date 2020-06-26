@@ -10,7 +10,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'preservim/nerdcommenter'
 Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()
@@ -27,7 +27,7 @@ set backspace=2
 
 map <C-n> :NERDTreeToggle<CR>
 
-inoremap jk <esc>
+inoremap kj <esc>
 
 let g:airline_theme='luna'
 
@@ -35,3 +35,15 @@ colorscheme nord
 
 set cursorline
 set clipboard=unnamedplus
+
+nnoremap ; :
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+autocmd ColorScheme * highlight Visual ctermbg=0
+
+set noswapfile
