@@ -24,12 +24,14 @@ set number relativenumber
 set nu rnu
 set hlsearch
 set backspace=2
+set autoread
 
 map <C-n> :NERDTreeToggle<CR>
 
 inoremap kj <esc>
 
-let g:airline_theme='luna'
+let g:airline_theme='violet'
+let g:airline#extensions#tabline#enabled = 1
 
 colorscheme nord
 
@@ -47,3 +49,5 @@ map <C-l> <C-w>l
 autocmd ColorScheme * highlight Visual ctermbg=0
 
 set noswapfile
+
+let mapleader = "\<Space>"
