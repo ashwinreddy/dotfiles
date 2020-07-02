@@ -12,6 +12,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'preservim/nerdcommenter'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()
 
@@ -36,7 +37,13 @@ let g:airline#extensions#tabline#enabled = 1
 colorscheme nord
 
 set cursorline
-set clipboard=unnamedplus
+
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
+
 
 nnoremap ; :
 
@@ -51,3 +58,7 @@ autocmd ColorScheme * highlight Visual ctermbg=0
 set noswapfile
 
 let mapleader = "\<Space>"
+nnoremap <C-g> :Goyo<CR>
+
+autocmd FileType markdown setlocal spell spelllang=en_us
+autocmd FileType markdown Goyo
